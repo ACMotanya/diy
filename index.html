@@ -1,778 +1,104 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en-US">
+<html>
+
 <head>
 
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="author" content="CousinDIY" />
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<!-- Stylesheets
-	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="style.css" type="text/css" />
-	<link rel="stylesheet" href="css/dark.css" type="text/css" />
-	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
-	<link rel="stylesheet" href="css/animate.css" type="text/css" />
-	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+	<title>Cousin DIY</title>
 
-	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!--[if lt IE 9]>
-		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-	<![endif]-->
+	<meta name="keywords" content="DIY Projects and Accessories" />
+	<meta name="description" content="DIY Projects and Accessories">
+	<meta name="author" content="cousindiy.com">
 
-	<!-- Document Title
-	============================================= -->
-	<title>Home | Cousin DIY</title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+	<!-- Mobile Metas -->
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<!-- Web Fonts  -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+	<!-- Vendor CSS -->
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendor/animate/animate.min.css">
+	<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+	<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/theme-elements.css">
+	<link rel="stylesheet" href="css/theme-blog.css">
+	<link rel="stylesheet" href="css/theme-shop.css">
+
+	<!-- Current Page CSS -->
+	<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
+	<link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
+	<link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
+
+	<!-- Skin CSS -->
+	<link rel="stylesheet" href="css/skins/skin-shop-11.css">
+
+	<!-- Demo CSS -->
+	<link rel="stylesheet" href="css/demos/demo-shop-11.css">
+
+	<!-- Theme Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Head Libs -->
+	<script src="vendor/modernizr/modernizr.min.js"></script>
 
 </head>
 
-<body class="stretched">
+<body id="root">
 
-	<!-- Document Wrapper
-	============================================= -->
-	<div id="wrapper" class="clearfix">
 
-		<!-- Top Bar
-		============================================= -->
-		<div id="top-bar">
 
-			<div class="container clearfix">
 
-				<div class="col_half nobottommargin hidden-xs">
+	<script src="/bundle.js"></script>
 
-					<p class="nobottommargin"><strong>Call:</strong> 1800-547-2145 | <strong>Email:</strong> info@CousinDIY.com</p>
+	<!-- Vendor -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+	<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="vendor/jquery-cookie/jquery-cookie.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/common/common.min.js"></script>
+	<script src="vendor/jquery.validation/jquery.validation.min.js"></script>
+	<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+	<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
+	<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+	<script src="vendor/isotope/jquery.isotope.min.js"></script>
+	<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+	<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="vendor/vide/vide.min.js"></script>
 
-				</div>
+	<!-- Theme Base, Components and Settings -->
+	<script src="js/theme.js"></script>
 
-				<div class="col_half col_last fright nobottommargin">
 
-					<!-- Top Links
-					============================================= -->
-					<div class="top-links">
-						<ul>
-							<li><a href="#">USD</a>
-								<ul>
-									<li><a href="#">EUR</a></li>
-									<li><a href="#">AUD</a></li>
-									<li><a href="#">GBP</a></li>
-								</ul>
-							</li>
-							<li><a href="#">EN</a>
-								<ul>
-									<li><a href="#"><img src="images/icons/flags/french.png" alt="French"> FR</a></li>
-									<li><a href="#"><img src="images/icons/flags/italian.png" alt="Italian"> IT</a></li>
-									<li><a href="#"><img src="images/icons/flags/german.png" alt="German"> DE</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Login</a>
-								<div class="top-link-section">
-									<form id="top-login" role="form">
-										<div class="input-group" id="top-login-username">
-											<span class="input-group-addon"><i class="icon-user"></i></span>
-											<input type="email" class="form-control" placeholder="Email address" required="">
-										</div>
-										<div class="input-group" id="top-login-password">
-											<span class="input-group-addon"><i class="icon-key"></i></span>
-											<input type="password" class="form-control" placeholder="Password" required="">
-										</div>
-										<label class="checkbox">
-										  <input type="checkbox" value="remember-me"> Remember me
-										</label>
-										<button class="btn btn-danger btn-block" type="submit">Sign in</button>
-									</form>
-								</div>
-							</li>
-						</ul>
-					</div><!-- .top-links end -->
+	<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+	<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
-				</div>
+	<!-- Current Page Vendor and Views -->
+	<script src="js/views/view.contact.js"></script>
 
-			</div>
 
-		</div><!-- #top-bar end -->
 
-		<!-- Header
-		============================================= -->
-		<header id="header" class="sticky-style-2">
+	<!-- Demo -->
+	<script src="js/demos/demo-shop-11.js"></script>
 
-			<div class="container clearfix">
+	<!-- Theme Custom -->
+	<script src="js/custom.js"></script>
 
-				<!-- Logo
-				============================================= -->
-				<div id="logo">
-					<a href="index.html" class="standard-logo" data-dark-logo="img/cousindiy.png"><img src="img/cousindiy.png" alt="DIY Logo"></a>
-					<a href="index.html" class="retina-logo" data-dark-logo="img/cousindiy.png"><img src="img/cousindiy.png" alt="DIY Logo"></a>
-				</div><!-- #logo end -->
-
-				<ul class="header-extras">
-					<li>
-						<i class="i-medium i-circled i-bordered icon-thumbs-up2 nomargin"></i>
-						<div class="he-text">
-							Original Brands
-							<span>100% Guaranteed</span>
-						</div>
-					</li>
-					<li>
-						<i class="i-medium i-circled i-bordered icon-truck2 nomargin"></i>
-						<div class="he-text">
-							Free Shipping
-							<span>for $20 or more</span>
-						</div>
-					</li>
-					<li>
-						<i class="i-medium i-circled i-bordered icon-undo nomargin"></i>
-						<div class="he-text">
-							30-Day Returns
-							<span>Completely Free</span>
-						</div>
-					</li>
-				</ul>
-
-			</div>
-
-			<div id="header-wrap">
-
-				<!-- Primary Navigation
-				============================================= -->
-				<nav id="primary-menu" class="style-2">
-
-					<div class="container clearfix">
-
-						<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-							<ul>
-								<li class="current"><a href="#"><div>Products</div></a></li>
-								<li><a href="#"><div>Projects</div></a></li>
-								<li><a href="#"><div>How To</div></a></li>
-								<li><a href="#"><div>Ambassadors</div></a></li>
-								<li><a href="#"><div>In The News</div></a></li>
-								<li><a href="#"><div>Blog</div></a></li>
-							</ul>
-
-						<!-- Top Cart
-						============================================= -->
-						<div id="top-cart">
-							<a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
-							<div class="top-cart-content">
-								<div class="top-cart-title">
-									<h4>Shopping Cart</h4>
-								</div>
-								<div class="top-cart-items">
-									<div class="top-cart-item clearfix">
-										<div class="top-cart-item-image">
-											<a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
-										</div>
-										<div class="top-cart-item-desc">
-											<a href="#">Blue Round-Neck Tshirt</a>
-											<span class="top-cart-item-price">$19.99</span>
-											<span class="top-cart-item-quantity">x 2</span>
-										</div>
-									</div>
-									<div class="top-cart-item clearfix">
-										<div class="top-cart-item-image">
-											<a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
-										</div>
-										<div class="top-cart-item-desc">
-											<a href="#">Light Blue Denim Dress</a>
-											<span class="top-cart-item-price">$24.99</span>
-											<span class="top-cart-item-quantity">x 3</span>
-										</div>
-									</div>
-								</div>
-								<div class="top-cart-action clearfix">
-									<span class="fleft top-checkout-price">$114.95</span>
-									<button class="button button-3d button-small nomargin fright">View Cart</button>
-								</div>
-							</div>
-						</div><!-- #top-cart end -->
-
-						<!-- Top Search
-						============================================= -->
-						<div id="top-search">
-							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-							<form action="search.html" method="get">
-								<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
-							</form>
-						</div><!-- #top-search end -->
-
-					</div>
-
-				</nav><!-- #primary-menu end -->
-
-			</div>
-
-		</header><!-- #header end -->
-
-		<!-- Content
-		============================================= -->
-		<section id="content">
-
-			<div class="content-wrap">
-
-				<div class="container clearfix">
-
-					<div class="col_two_third bottommargin-lg">
-
-						<div class="fslider" data-arrows="false">
-							<div class="flexslider">
-								<div class="slider-wrap">
-									<div class="slide">
-										<a href="#">
-											<img src="img/slider-4.jpg" alt="Shop Image">
-										</a>
-									</div>
-									<div class="slide">
-										<a href="#">
-											<img src="img/slider-6.jpg" alt="Shop Image">
-										</a>
-									</div>
-									<div class="slide">
-										<a href="#">
-											<img src="img/slider-5.jpg" alt="Shop Image">
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col_one_third bottommargin-lg col_last">
-
-						<div class="col_full bottommargin-sm">
-							<a href="#"><img src="img/banner-1.jpg" alt="Image"></a>
-						</div>
-
-						<div class="col_full nobottommargin">
-							<a href="#"><img src="img/banner-3.jpg" alt="Image"></a>
-						</div>
-
-					</div>
-
-					<div class="clear"></div>
-
-				</div>
-
-				<div class="promo parallax promo-full bottommargin-lg" style="background-image: url('img/parallax.jpeg');" data-stellar-background-ratio="0.4">
-					<div class="container clearfix">
-						<h3 style="color: white;">Get <span>30%</span> off on orders of $29 or more. Use Coupon: <span>SHOP30</span></h3>
-						<span style="color: white;">Sale available on selected items that include Class In A Box, Crystazzi, M'Bellish &amp; Simple Charms.</span>
-						<a href="#" class="button button-xlarge button-rounded">Start Shopping</a>
-					</div>
-				</div>
-
-				<div class="container clearfix">
-
-					<div class="col_one_third bottommargin-lg">
-						<div class="feature-box center media-box fbox-bg">
-							<div class="fbox-media">
-								<img src="img/banner-6.jpg" alt="Image">
-							</div>
-							<div class="fbox-desc">
-								<h3>Jewelry Design Blog<span class="subtitle">Fashion Tips from Experts</span></h3>
-								<p><a href="#" class="btn btn-default">Browse Entries</a></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col_one_third bottommargin-lg">
-						<div class="feature-box center media-box fbox-bg">
-							<div class="fbox-media">
-								<img src="img/banner-4.jpg" alt="Image">
-							</div>
-							<div class="fbox-desc">
-								<h3>Latest Projects<span class="subtitle">New Designs Available</span></h3>
-								<p><a href="#" class="btn btn-default">Check New Arrivals</a></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="col_one_third bottommargin-lg col_last">
-						<div class="feature-box center media-box fbox-bg">
-							<div class="fbox-media">
-								<img src="img/banner-5.jpg" alt="Image">
-							</div>
-							<div class="fbox-desc">
-								<h3>Newest Products<span class="subtitle">Latest DIY crafts</span></h3>
-								<p><a href="#" class="btn btn-default">Check New Arrivals</a></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="clear"></div>
-
-					<div class="fancy-title title-center title-dotted-border topmargin-sm">
-						<h3> Popular Categories </h3>
-					</div>
-					<div class="col_one_third nobottommargin">
-
-						<div class="fancy-title title-border">
-							<h4>Jewelry Basics</h4>
-						</div>
-
-						<div>
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-1.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Chain and Metal Beads</a></h4>
-									</div>
-								</div>
-							</div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-2.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Charms and Connectors</a></h4>
-									</div>
-								</div>
-							</div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-3.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Findings</a></h4>
-									</div>
-								</div>
-							</div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-4.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Pendants</a></h4>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="col_one_third nobottommargin">
-
-						<div class="fancy-title title-border">
-							<h4>Kids</h4>
-						</div>
-
-						<div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-5.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Bead Girl</a></h4>
-									</div>
-
-								</div>
-							</div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-6.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Fun Pack</a></h4>
-									</div>
-
-								</div>
-							</div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-7.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">It Girl</a></h4>
-									</div>
-
-								</div>
-							</div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-8.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Sassafras</a></h4>
-									</div>
-
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="col_one_third nobottommargin col_last">
-
-						<div class="fancy-title title-border">
-							<h4>Tools and Cording</h4>
-						</div>
-
-						<div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-9.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Precision Comfort Tools</a></h4>
-									</div>
-
-								</div>
-							</div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-10.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Tools</a></h4>
-									</div>
-
-								</div>
-							</div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-11.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Beadalon</a></h4>
-									</div>
-
-								</div>
-							</div>
-
-							<div class="spost clearfix">
-								<div class="entry-image">
-									<a href="#"><img src="img/category/category-12.jpg" alt="Image"></a>
-								</div>
-								<div class="entry-c">
-									<div class="entry-title">
-										<h4><a href="#">Cording and Wire</a></h4>
-									</div>
-
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-
-					<div class="clear"></div><div class="line"></div>
-
-					<div id="oc-clients-full" class="owl-carousel image-carousel carousel-widget" data-margin="30" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xxs="2" data-items-xs="3" data-items-sm="4" data-items-md="5" data-items-lg="7">
-
-						<div class="oc-item"><a href="#"><img src="img/logos/ac-moore-bw.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="img/logos/amazon-logo-bw.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="img/logos/ben-franklin.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="img/logos/beverlys.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="img/logos/walmart-bw.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="img/logos/hancock.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="img/logos/joann.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="img/logos/meijer-bw.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="img/logos/michaels.png" alt="Clients"></a></div>
-						<div class="oc-item"><a href="#"><img src="img/logos/walmart-canada-bw.png" alt="Clients"></a></div>
-
-
-					</div>
-
-				</div>
-
-				<div class="si-sticky si-sticky-right hidden-sm hidden-xs">
-					<a href="#" class="social-icon si-colored si-facebook" data-animate="bounceInRight">
-						<i class="icon-facebook"></i>
-						<i class="icon-facebook"></i>
-					</a>
-					<a href="#" class="social-icon si-colored si-twitter" data-animate="bounceInRight" data-delay="100">
-						<i class="icon-twitter"></i>
-						<i class="icon-twitter"></i>
-					</a>
-					<a href="#" class="social-icon si-colored si-pinterest" data-animate="bounceInRight" data-delay="200">
-						<i class="icon-pinterest"></i>
-						<i class="icon-pinterest"></i>
-					</a>
-					<a href="#" class="social-icon si-colored si-instagram" data-animate="bounceInRight" data-delay="300">
-						<i class="icon-instagram"></i>
-						<i class="icon-instagram"></i>
-					</a>
-					<a href="#" class="social-icon si-colored si-gplus" data-animate="bounceInRight" data-delay="600">
-						<i class="icon-gplus"></i>
-						<i class="icon-gplus"></i>
-					</a>
-					<a href="#" class="social-icon si-colored si-rss" data-animate="bounceInRight" data-delay="700">
-						<i class="icon-rss"></i>
-						<i class="icon-rss"></i>
-					</a>
-				</div>
-
-			</div>
-
-		</section><!-- #content end -->
-
-		<!-- Footer
-		============================================= -->
-		<footer id="footer" class="dark">
-<!--
-			<div class="container">
-
-				<!-- Footer Widgets
-				=============================================
-				<div class="footer-widgets-wrap clearfix">
-
-					<div class="col_two_third">
-
-						<div class="col_one_third">
-
-							<div class="widget clearfix">
-
-								<img src="images/footer-widget-logo.png" alt="" class="footer-logo">
-
-								<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
-
-								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
-									<address>
-										<strong>Headquarters:</strong><br>
-										795 Folsom Ave, Suite 600<br>
-										San Francisco, CA 94107<br>
-									</address>
-									<abbr title="Phone Number"><strong>Phone:</strong></abbr> (91) 8547 632521<br>
-									<abbr title="Fax"><strong>Fax:</strong></abbr> (91) 11 4752 1433<br>
-									<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="col_one_third">
-
-							<div class="widget widget_links clearfix">
-
-								<h4>Blogroll</h4>
-
-								<ul>
-									<li><a href="http://codex.wordpress.org/">Documentation</a></li>
-									<li><a href="http://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
-									<li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
-									<li><a href="http://wordpress.org/support/">Support Forums</a></li>
-									<li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
-									<li><a href="http://wordpress.org/news/">WordPress Blog</a></li>
-									<li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
-								</ul>
-
-							</div>
-
-						</div>
-
-						<div class="col_one_third col_last">
-
-							<div class="widget clearfix">
-								<h4>Recent Posts</h4>
-
-								<div id="post-list-footer">
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
-											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
-										</div>
-									</div>
-
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
-											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
-										</div>
-									</div>
-
-									<div class="spost clearfix">
-										<div class="entry-c">
-											<div class="entry-title">
-												<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
-											</div>
-											<ul class="entry-meta">
-												<li>10th July 2014</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-					<div class="col_one_third col_last">
-
-						<div class="widget clearfix" style="margin-bottom: -20px;">
-
-							<div class="row">
-
-								<div class="col-md-6 bottommargin-sm">
-									<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
-									<h5 class="nobottommargin">Total Downloads</h5>
-								</div>
-
-								<div class="col-md-6 bottommargin-sm">
-									<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
-									<h5 class="nobottommargin">Clients</h5>
-								</div>
-
-							</div>
-
-						</div>
-
-						<div class="widget subscribe-widget clearfix">
-							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-							<div class="widget-subscribe-form-result"></div>
-							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
-								<div class="input-group divcenter">
-									<span class="input-group-addon"><i class="icon-email2"></i></span>
-									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
-									<span class="input-group-btn">
-										<button class="btn btn-success" type="submit">Subscribe</button>
-									</span>
-								</div>
-							</form>
-						</div>
-
-						<div class="widget clearfix" style="margin-bottom: -20px;">
-
-							<div class="row">
-
-								<div class="col-md-6 clearfix bottommargin-sm">
-									<a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
-										<i class="icon-facebook"></i>
-										<i class="icon-facebook"></i>
-									</a>
-									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
-								</div>
-								<div class="col-md-6 clearfix">
-									<a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
-										<i class="icon-rss"></i>
-										<i class="icon-rss"></i>
-									</a>
-									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
-								</div>
-
-							</div>
-
-						</div>
-
-					</div>
-
-				</div><!-- .footer-widgets-wrap end
-
-			</div>
-
-			<!-- Copyrights
-			============================================= -->
-			<div id="copyrights">
-
-				<div class="container clearfix">
-
-					<div class="col_half">
-						Copyrights &copy; 2016 All Rights Reserved by Cousin Inc.<br>
-						<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
-					</div>
-
-					<div class="col_half col_last tright">
-						<div class="fright clearfix">
-							<a href="#" class="social-icon si-small si-borderless si-facebook">
-								<i class="icon-facebook"></i>
-								<i class="icon-facebook"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-twitter">
-								<i class="icon-twitter"></i>
-								<i class="icon-twitter"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-gplus">
-								<i class="icon-gplus"></i>
-								<i class="icon-gplus"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-pinterest">
-								<i class="icon-pinterest"></i>
-								<i class="icon-pinterest"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-vimeo">
-								<i class="icon-vimeo"></i>
-								<i class="icon-vimeo"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-github">
-								<i class="icon-github"></i>
-								<i class="icon-github"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-yahoo">
-								<i class="icon-yahoo"></i>
-								<i class="icon-yahoo"></i>
-							</a>
-
-							<a href="#" class="social-icon si-small si-borderless si-linkedin">
-								<i class="icon-linkedin"></i>
-								<i class="icon-linkedin"></i>
-							</a>
-						</div>
-
-						<div class="clear"></div>
-
-						<i class="icon-envelope2"></i> info@cousindiy.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
-					</div>
-
-				</div>
-
-			</div><!-- #copyrights end -->
-
-		</footer><!-- #footer end -->
-
-	</div><!-- #wrapper end -->
-
-	<!-- Go To Top
-	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
-
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/plugins.js"></script>
-
-	<!-- Footer Scripts
-	============================================= -->
-	<script type="text/javascript" src="js/functions.js"></script>
-
+	<!-- Theme Initialization Files -->
+	<script src="js/theme.init.js"></script>
 </body>
+
 </html>
