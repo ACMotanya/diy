@@ -1,1 +1,36 @@
 /* Add here all your CSS customizations */
+
+
+.banners-container .slider-area {
+	padding: 0 8px;
+}
+.banners-container .slider-area .owl-carousel {
+	margin-bottom: 0;
+}
+@media (min-width: 992px) {
+	.banners-container .slider-area {
+		float: left;
+		width: 72.3%;
+	}
+}
+.banners-container .slider-area .owl-theme .owl-dots {
+	position: absolute;
+	bottom: 8px;
+	margin: 0;
+	left: 0;
+	right: 0;
+}
+@media (min-width: 768px) {
+	.banners-container .slider-area .owl-theme .owl-dots {
+		bottom: 15px;
+	}
+}
+.banners-container .side-area {
+	padding: 0 8px;
+}
+@media (min-width: 992px) {
+	.banners-container .side-area {
+		float: left;
+		width: 27.7%;
+	}
+}
