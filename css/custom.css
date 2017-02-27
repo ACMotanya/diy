@@ -34,3 +34,6 @@
 		width: 27.7%;
 	}
 }
+.client img {
+	max-width: 80% !important;
+}
