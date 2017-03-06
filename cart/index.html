@@ -38,17 +38,11 @@
   <link rel="stylesheet" href="/diy/vendor/rs-plugin/css/layers.css">
   <link rel="stylesheet" href="/diy/vendor/rs-plugin/css/navigation.css">
 
-  <!-- Skin CSS -->
-  <!--(remove-empty-lines-start)-->
-
-
   <link rel="stylesheet" href="/diy/css/skins/skin-shop-11.css">
 
   <!-- Demo CSS -->
 
   <link rel="stylesheet" href="/diy/css/demos/demo-shop-11.css">
-
-  <!--(remove-empty-lines-end)-->
 
   <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="/diy/css/custom.css">
@@ -56,6 +50,8 @@
   <!-- Head Libs -->
   <script src="/diy/vendor/modernizr/modernizr.min.js"></script>
   <link rel="canonical" href="http://localhost:4000/diy/cart/">
+
+  <script src="/diy/vendor/jquery/jquery.min.js"></script>
 
   
 </head>
@@ -232,8 +228,8 @@
 										</div>
 
 										<div class="cart-actions">
-											<a href="demo-shop-10-cart.html" class="btn btn-primary">View Cart</a>
-											<a href="demo-shop-10-checkout.html" class="btn btn-primary">Checkout</a>
+											<a href="/diy/cart" class="btn btn-primary">View Cart</a>
+											<a href="/diy/checkout" class="btn btn-primary">Checkout</a>
 										</div>
 									</div>
 								</div>
@@ -253,16 +249,68 @@
 									Products
 								</a>
 							</li>
-							<li>
-								<a href="#">
-									Projects
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									How To
-								</a>
-							</li>
+							<li class="dropdown dropdown-mega">
+                    <a href="demo-shop-7-category-4col.html" class="dropdown-toggle">
+                      Learning Center
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="dropdown-mega-content">
+
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <a href="demo-shop-7-category-4col.html" class="cat-img"><img src="/diy/img/demos/shop/cat-tv.png" alt="Category Name"></a>
+
+                                  <a href="demo-shop-7-category-4col.html" class="dropdown-mega-sub-title">Watch &amp; Learn</a>
+                                  <ul class="dropdown-mega-sub-nav">
+                                    <li><a href="demo-shop-7-category-4col.html">TV, Audio</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Computers &amp; Tablets</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Home Office Equipments</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">GPS Navigation</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Car Video, Audio &amp; GPS</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Radios &amp; Clock Radios</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-md-4">
+                                  <a href="demo-shop-7-category-4col.html" class="cat-img"><img src="/diy/img/demos/shop/cat-camera.png" alt="Category Name"></a>
+                                  <a href="demo-shop-7-category-4col.html" class="dropdown-mega-sub-title">Step by Step Technique</a>
+                                  <ul class="dropdown-mega-sub-nav">
+                                    <li><a href="demo-shop-7-category-4col.html">Cell Phones &amp; Accessories</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Cameras &amp; Photo</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Photo Accessories</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">IP Phones</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Samsung Galaxy Phones</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">iPad &amp; Android Tablets</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-md-4">
+                                  <a href="demo-shop-7-category-4col.html" class="cat-img"><img src="/diy/img/demos/shop/cat-game.png" alt="Category Name"></a>
+                                  <a href="demo-shop-7-category-4col.html" class="dropdown-mega-sub-title">Project Ideas</a>
+                                  <ul class="dropdown-mega-sub-nav">
+                                    <li><a href="demo-shop-7-category-4col.html">e-Book Readers</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Video Games &amp; Consolers</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Printers &amp; Scanners</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Digital Picture Frames</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">3D Fashion Games</a></li>
+                                    <li><a href="demo-shop-7-category-4col.html">Game Machine &amp; Devices</a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="menu-banner-area">
+                                <img src="/diy/img/demos/shop/menu-cat.png" alt="Menu Banner">
+
+                                <p>This is a custom block. You can add any images or links here</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
 							<li>
 								<a href="#">
 									Designers
@@ -270,7 +318,7 @@
 							</li>
 
 							<li class="pull-right">
-								<a href="#">
+								<a href="/diy/contact">
 									Contact Us
 								</a>
 							</li>
@@ -404,7 +452,7 @@
 				<a href="#">Blog</a>
 			</li>
 			<li>
-				<a href="demo-shop-11-contact-us.html">Contact Us</a>
+				<a href="/diy/contact">Contact Us</a>
 			</li>
 
 		</ul>
@@ -690,11 +738,11 @@
 				<ul class="links">
 					<li>
 						<i class="fa fa-caret-right"></i>
-						<a href="demo-shop-10-about-us.html">About Us</a>
+						<a href="/diy/about">About Us</a>
 					</li>
 					<li>
 						<i class="fa fa-caret-right"></i>
-						<a href="demo-shop-10-contact-us.html">Contact Us</a>
+						<a href="/diy/contact">Contact Us</a>
 					</li>
 					<li>
 						<i class="fa fa-caret-right"></i>
@@ -790,7 +838,6 @@
     </div>
     <script type="text/javascript" src="/diy/assets/javascripts/bundle.js" charset="utf-8"></script>
     <!-- Vendor -->
-    <script src="/diy/vendor/jquery/jquery.min.js"></script>
     <script src="/diy/vendor/jquery.appear/jquery.appear.min.js"></script>
     <script src="/diy/vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="/diy/vendor/jquery-cookie/jquery-cookie.min.js"></script>
@@ -824,7 +871,62 @@
     <!-- Theme Initialization Files -->
     <script src="/diy/js/theme.init.js"></script>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr-wWyQRq0K-iZWQLc2E5IjCt0TP-AkOo"></script>
 
+    <script>
+
+			/*
+			Map Settings
+
+				Find the Latitude and Longitude of your address:
+					- http://universimmedia.pagesperso-orange.fr/geo/loc.htm
+					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
+
+			*/
+
+			// Map Markers
+			var mapMarkers = [{
+				address: "New York, NY 10017",
+				html: "<strong>New York Office</strong><br>New York, NY 10017",
+				icon: {
+					image: "img/pin.png",
+					iconsize: [26, 46],
+					iconanchor: [12, 46]
+				},
+				popup: true
+			}];
+
+			// Map Initial Location
+			var initLatitude = 40.75198;
+			var initLongitude = -73.96978;
+
+			// Map Extended Settings
+			var mapSettings = {
+				controls: {
+					draggable: (($.browser.mobile) ? false : true),
+					panControl: true,
+					zoomControl: true,
+					mapTypeControl: true,
+					scaleControl: true,
+					streetViewControl: true,
+					overviewMapControl: true
+				},
+				scrollwheel: false,
+				markers: mapMarkers,
+				latitude: initLatitude,
+				longitude: initLongitude,
+				zoom: 16
+			};
+
+			var map = $('#googlemaps').gMap(mapSettings);
+
+			// Map Center At
+			var mapCenterAt = function(options, e) {
+				e.preventDefault();
+				$('#googlemaps').gMap("centerAt", options);
+			}
+
+		</script>
   </body>
 
 </html>
