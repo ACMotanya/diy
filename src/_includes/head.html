@@ -35,17 +35,11 @@
   <link rel="stylesheet" href="{{ "/vendor/rs-plugin/css/layers.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/vendor/rs-plugin/css/navigation.css" | prepend: site.baseurl }}">
 
-  <!-- Skin CSS -->
-  <!--(remove-empty-lines-start)-->
-
-
   <link rel="stylesheet" href="{{ "/css/skins/skin-shop-11.css" | prepend: site.baseurl }}">
 
   <!-- Demo CSS -->
 
   <link rel="stylesheet" href="{{ "/css/demos/demo-shop-11.css" | prepend: site.baseurl }}">
-
-  <!--(remove-empty-lines-end)-->
 
   <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="{{ "/css/custom.css" | prepend: site.baseurl }}">
@@ -53,6 +47,8 @@
   <!-- Head Libs -->
   <script src="{{ "/vendor/modernizr/modernizr.min.js" | prepend: site.baseurl }}"></script>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  <script src="{{ "/vendor/jquery/jquery.min.js" | prepend: site.baseurl }}"></script>
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
