@@ -37,3 +37,10 @@
 .client img {
 	max-width: 80% !important;
 }
+
+@media (min-width: 992px) {
+	#header .header-nav-main nav > ul > li > a {
+		font-size: 15px;
+		font-weight: 600;
+	}
+}
