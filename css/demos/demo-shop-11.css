@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6,
 	margin: 0 0 15px;
 	text-transform: none;
 	letter-spacing: 0 !important;
-	font-family: "Work Sans"
+	font-family: "Fredericka the Great"
 }
 
 h1,
@@ -464,7 +464,7 @@ h2.word-rotator-title .word-rotate {
 }
 #header .header-container {
 	padding-top: 20.5px;
-	padding-bottom: 20.5px;
+	padding-bottom: 0.5px; /* original property 20.5px */
 	display: table;
 	table-layout: fixed;
 }
@@ -906,7 +906,7 @@ h2.word-rotator-title .word-rotate {
 	transition: none;
 	color: #828385;
 	padding: 13px 20px;
-	font-family: "Work Sans";
+	font-family: "Fredericka the Great";
 }
 #header .header-nav-main nav > ul > li.dropdown-full-color.dropdown-primary > a,
 #header .header-nav-main nav > ul > li.dropdown-full-color.dropdown-primary > a.dropdown-toggle {
