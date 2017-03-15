@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6,
 	margin: 0 0 15px;
 	text-transform: none;
 	letter-spacing: 0 !important;
-	font-family: "Fredericka the Great"
+	font-family: "Enriqueta"
 }
 
 h1,
@@ -463,8 +463,8 @@ h2.word-rotator-title .word-rotate {
 	}
 }
 #header .header-container {
-	padding-top: 20.5px;
-	padding-bottom: 0.5px; /* original property 20.5px */
+/*	padding-top: 20.5px; original property 20.5px */
+/*	padding-bottom: 20.5px; original property 20.5px */
 	display: table;
 	table-layout: fixed;
 }
@@ -906,7 +906,7 @@ h2.word-rotator-title .word-rotate {
 	transition: none;
 	color: #828385;
 	padding: 13px 20px;
-	font-family: "Fredericka the Great";
+	font-family: "Enriqueta";
 }
 #header .header-nav-main nav > ul > li.dropdown-full-color.dropdown-primary > a,
 #header .header-nav-main nav > ul > li.dropdown-full-color.dropdown-primary > a.dropdown-toggle {
@@ -1113,9 +1113,9 @@ h2.word-rotator-title .word-rotate {
 }
 #header .header-nav .header-logo img {
 	width: auto;
-	height: 32px;
+	height: 45px;  /* original 32px */
 	margin-right: 20px;
-	margin-top: 3px;
+	margin-top: 0px;  /* original 3px */
 }
 #header .header-nav .cart-dropdown {
 	float: right;
@@ -1142,7 +1142,7 @@ h2.word-rotator-title .word-rotate {
 	padding: 4px 0;
 }
 .sticky-header-active #header .header-nav-main {
-	min-height: 38px;
+	min-height: 38px; 
 	border-bottom: none;
 }
 .sticky-header-active #header .header-nav-main nav {

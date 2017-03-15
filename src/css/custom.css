@@ -1,5 +1,14 @@
 /* Add here all your CSS customizations */
 
+#header .header-top, #footer {
+	background-color: #0e0e0e;
+}
+
+#footer .footer-copyright {
+	background-color: #060606;
+}
+
+
 
 .banners-container .slider-area {
 	padding: 0 8px;
@@ -44,7 +53,7 @@
 		font-weight: 600;
 	}
 	#header .header-nav-main nav > ul > li.dropdown .dropdown-menu {
-		background-color: #1e1e1e;
+		background-color: #0e0e0e;
 	}
 }
 
