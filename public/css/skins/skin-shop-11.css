@@ -109,15 +109,15 @@ html .background-color-primary {
 }
 
 html .background-color-secondary {
-	background-color: #e36159 !important;
+	background-color: #4abdac !important;
 }
 
 html .background-color-tertiary {
-	background-color: #2baab1 !important;
+	background-color: #999 !important;
 }
 
 html .background-color-quaternary {
-	background-color: #383f48 !important;
+	background-color: #1e1e1e !important;
 }
 
 html .background-color-dark {
@@ -129,7 +129,7 @@ html .background-color-light {
 }
 
 .alternative-font {
-	color: #AC0062;
+	color: #4abdac;
 }
 
 html .blockquote-primary {
@@ -137,15 +137,15 @@ html .blockquote-primary {
 }
 
 html .blockquote-secondary {
-	border-color: #e36159 !important;
+	border-color: #4abdac !important;
 }
 
 html .blockquote-tertiary {
-	border-color: #2baab1 !important;
+	border-color: #999 !important;
 }
 
 html .blockquote-quaternary {
-	border-color: #383f48 !important;
+	border-color: #1e1e1e !important;
 }
 
 html .blockquote-dark {
@@ -1847,7 +1847,7 @@ html .inverted-light {
 
 .owl-carousel .owl-dots .owl-dot.active span,
 .owl-carousel .owl-dots .owl-dot:hover span {
-	background-color: #dc2226;
+	background-color: #4abdac;
 }
 
 .owl-carousel.show-nav-title .owl-nav [class*="owl-"] {
