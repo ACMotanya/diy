@@ -18,7 +18,6 @@ function filterFunction2(a,b,c,d,e,f,g,h)
       loc_no: h
     },
     success: function(response) {
-      console.log(response);
       $('#display-products').empty();
       itemRender("display-products", response);
     }
@@ -46,17 +45,127 @@ function itemRender(div,response)
       prod  = '<li><div class="product"><figure class="product-image-area"><a href="#" title="' + flds[1] + '" class="product-image"><img src="https://www.laurajanelle.com/ljimages/' + flds[0].trim()  + '-sm.png" alt="' + flds[1] + '"></a>';
       prod += '<a href="#" class="product-quickview"><i class="fa fa-share-square-o"></i><span>Quick View</span></a></figure><div class="product-details-area"><h2 class="product-name"><a href="#" title="' + flds[1] + '">' + flds[1] + '</a></h2>';
       prod += '<div class="product-price-box"><span class="product-price">$' + flds[4] + '</span></div><div class="product-actions"><a href="#" class="addtowishlist" title="Add to Wishlist"><i class="fa fa-heart"></i></a><a href="#" class="addtocart" title="Add to Cart"><i class="fa fa-shopping-cart"></i><span>Add to Cart</span></a><a href="#" class="comparelink" title="Add to Compare"><i class="glyphicon glyphicon-signal"></i></a></div></div></div></li>';
-      /*
-      prod =  '<div class="product clearfix ' + flds[2].trim() +" "+ flds[8].trim() +" "+ flds[9].trim() +" "+ flds[10].trim() + 1 +'"><div class="product-image"><a href="#detail-view+' + flds[0].trim() + '+' + flds[8].trim() + '+' + flds[9].trim() + '+' + flds[10].trim() + '"><img class="shopimg" src="https://www.laurajanelle.com/ljimages/' + flds[0].trim()  + '-sm.png" alt="' + flds[1] + '"></a>';
-      if (flds[7].trim().length === 3) {
-        prod += '<div class="sale-flash">NEW!</div>';
-      }
-      prod += '<div class="product-overlay"><a href="#shop" class="add-to-cart" data-notify-position="top-right" data-notify-type="info" data-notify-msg="<i class=icon-info-sign></i>Item ' + flds[0].trim() + ' has been added to your cart!" onclick="stock_no=\'' + flds[0].trim() + '\'; detailString=\'detail-view+' + flds[0].trim() + '+' + flds[8].trim() + '+' + flds[9].trim() + '\'; addItemDetailView(); shopPage(); SEMICOLON.widget.notifications(this); return false;"><i class="icon-shopping-cart"></i><span> Add to Cart</span></a>';
-      prod += '<a href="../shop-item.html" class="item-quick-view" data-lightbox="ajax" onclick="stock_no=\'' + flds[0].trim() + '\'; quickView(this.id);" id="' + flds[0].trim() + '+' + flds[8].trim() + '+' + flds[9].trim() + '"><i class="icon-zoom-in2"></i><span id="' + flds[0].trim() + '+' + flds[8].trim() + '+' + flds[9].trim() + '">Quick View</span></a></div></div>';
-      prod += '<div class="product-desc center"><div class="product-title"><h3><a href="#detail-view+' + flds[0].trim() + '+' + flds[8].trim() + '+' + flds[9].trim() + '+' + flds[10].trim() + '">' + flds[1] +'</a></h3></div><div class="product-price">cost &nbsp;<ins>$' + flds[4].trim() + '</ins></div></div></div>';
-      */
+
       html.push(prod);
     }
     document.getElementById(div).innerHTML += html.join('');
   }
+}
+
+
+//////////////////////////////
+// Get Detail View for Item //
+//////////////////////////////
+function detailView()
+{
+  jQuery("#images, #addInfo, #productGalleryThumbs").empty();
+  jQuery(".product-name, .product-short-desc").remove();
+
+  var picsGallery;
+  var picArray = ["", "-pk", "-rl"];
+  var dets;
+  var secondColumn;
+  var detailString;
+  var color;
+  var type;
+  var metal;
+  var secondImage;
+  var hash = window.location.hash.split("+");
+  var stock_no = hash[1];
+
+  if (hash.length === 5 ) {
+    detailString = window.location.hash;
+    color = hash[2];
+    type  = hash[3];
+    metal = hash[4];
+    sessionStorage.setItem(stock_no, detailString);
+  } else if ( sessionStorage.getItem(stock_no) !== null  && sessionStorage.getItem(stock_no) != "undefined" && sessionStorage.getItem(stock_no).length >= 15 ) {      //  add back if undefined ever comes up again
+    dets = sessionStorage.getItem(stock_no).split("+");
+    color = dets[2];
+    type  = dets[3];
+    metal = dets[4];
+  }
+
+
+  $.ajax({
+    type: "GET",
+    url: "https://netlink.laurajanelle.com:444/nlhtml/custom/netlink.php?",
+    data: {request_id: "APISTKDTL", stock_no: stock_no, session_no: "RGOT9DTDD9GER9ATTGBG9OT7Z"},
+    success: function(response) {
+
+      lines = response.split("\n");
+      // lines[0] is header row
+      // lines[1]+ are data lines
+      fields = lines[1].split("|");
+
+      /* Fill in the pictures for the product */
+
+      var pics =  '<div class="product-img-wrapper"><img id="product-zoom" src="https://www.laurajanelle.com/ljimages/' + fields[0] + '-lg.png" data-zoom-image="https://www.laurajanelle.com/ljimages/' + fields[0] + '-lg.png" alt="'+ fields[1] +'"></div>';
+          pics += '<a href="#" class="product-img-zoom" title="Zoom"><span class="glyphicon glyphicon-search"></span></a></div><a href="#" class="product-img-zoom" title="Zoom"><span class="glyphicon glyphicon-search"></span></a>';
+
+      picArray.forEach(function(element) {
+          picsGallery += '<div class="product-img-wrapper"><a href="#" data-image="{{ site.baseurl }}/img/demos/shop/products/single/product1.jpg" data-zoom-image="{{ site.baseurl }}/img/demos/shop/products/single/product1.jpg" class="product-gallery-item"><img src="{{ site.baseurl }}/images/products/pearl-240x320.jpg" alt="product"></a></div>';
+      });
+      
+
+      secondColumn  = '<h1 class="product-name">'+ fields[1] +'</h1><div class="product-short-desc"><p>	' + fields[8] + '</p></div><div class="product-detail-info"><div class="product-price-box"><span class="product-price">$' + fields[4] + '</span></div></div>';
+      info =  '<tr><td>Description</td><td>' + fields[1] + '</td></tr>';
+      info += '<tr><td>Dimensions</td><td>' + fields[6] + '</td></tr>';
+      info += '<tr><td>Color</td><td>' + color +'</td></tr>';
+      info += '<tr><td>Type</td><td>' + type + '</td></tr>';
+      info += '<tr><td>Look</td><td>' + fields[2] + '</td></tr>';
+      info += '<tr><td>Metal Color</td><td>' + metal + '</td></tr>';
+
+					
+
+					
+
+        
+       
+      
+
+       /* Fill in the pictures for the product 
+
+       var pics =  '<div class="fslider" data-pagi="false" data-arrows="false" data-thumbs="true"><div class="flexslider"><div class="slider-wrap" data-lightbox="gallery">';
+           pics += '<div class="slide" data-thumb="https://www.laurajanelle.com/ljimages/' + fields[0] + '-sm.png"><a href="https://www.laurajanelle.com/ljimages/' + fields[0] + '-lg.png" title="' + fields[1] + '" data-lightbox="gallery-item"><span class="zoom ex1"><img src="https://www.laurajanelle.com/ljimages/' + fields[0] + '-md.png" alt="' + fields[1] + '"></span></a></div>';      
+           pics += secondImage;
+           pics += '</div></div></div>';
+        if (fields[7].trim().length === 3) {
+          pics += '<div class="sale-flash">NEW!</div>';
+        }
+     
+
+       secondColumn  = '<div><a href="'+ detailString +'" title="Brand Logo" class="hidden-xs">';
+       secondColumn += '<img class="image_fade" src="../img/logos/'+ fields[2] +'-logo.png" alt="Brand Logo"></a></div>';
+       secondColumn += '<div><span itemprop="productID" class="sku_wrapper" style="font-size: 24px; font-weight: 600;">ITEM # <span class="sku">' + fields[0].replace(/\s+/g,'') + '</span></span></div><div class="line"></div>';
+       secondColumn += '<div class="product-price col_one_third" style="font-size: 16px; font-weight: 400;"> <ins>COST:&nbsp;' + fields[4] + '</ins></div><div class="col_one_third hidden-xs" style="top: 0px; margin: 0px;">MIN: 1</div>';
+       if ( fields[3] != ".00" )  {
+         secondColumn += '<div class="product-rating col_one_third col_last" style="top: 0px; margin: 0px;">MSRP:&nbsp;' + fields[3] + '</div>';
+       }
+       secondColumn += '<div class="clear"></div><div class="line"></div><form class="cart nobottommargin clearfix" method="post" enctype="multipart/form-data"><div class="quantity clearfix">';
+       secondColumn += '<input type="button" value="-" class="minus btn-number" data-type="minus" data-field="quant[1]" onclick="changeQuantity(this)">';
+       secondColumn += '<input type="text" name="quant[1]" step="1" min="1" name="quantity" value="1" title="Qty" size="4" class="qty form-control input-number" id="' + fields[0].replace(/\s+/g,'') + '" />';
+       secondColumn += '<input type="button" value="+" class="plus btn-number" data-type="plus" data-field="quant[1]" onclick="changeQuantity(this)"></div>';
+       secondColumn += '<button type="button" id="add-item" class="add-to-cart button nomargin" onclick="stock_no=\'' + fields[0].trim() + '\'; addItemDetailView();">Add to cart</button></form><div class="clear"></div><div class="line"></div>';
+
+       if (fields[8].length !== 0) {
+         secondColumn += '<p>' + fields[8] + '</p>';
+       } else {
+         secondColumn += '<p>' + fields[1] + '</p>';
+       }
+
+       info =  '<tr><td>Description</td><td>' + fields[1] + '</td></tr>';
+       info += '<tr><td>Dimensions</td><td>' + fields[6] + '</td></tr>';
+       info += '<tr><td>Color</td><td>' + whatColor(color) +'</td></tr>';
+       info += '<tr><td>Type</td><td>' + whatType(type) + '</td></tr>';
+       info += '<tr><td>Look</td><td>' + whatLook(fields[2]) + '</td></tr>';
+       info += '<tr><td>Metal Color</td><td>' + whatMetal(metal) + '</td></tr>';
+
+          */
+       $("#images").html(pics);
+       $("#productGalleryThumbs").html(picsGallery);
+       $(".product-nav-container").after(secondColumn);
+       $("#addInfo").html(info);
+     }
+  });
 }
