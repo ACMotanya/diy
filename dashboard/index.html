@@ -614,7 +614,13 @@
 
 <div id="mobile-menu-overlay"></div>
       <div role="main" class="main">
-        <section class="page-header">
+        <style>
+      #invoices, #profile, #orders {
+        display: none;
+      }
+</style>
+
+<section class="page-header">
 	<div class="container">
 		<ul class="breadcrumb">
 			<li><a href="#">Home</a></li>
@@ -1131,7 +1137,7 @@
 			</section>
 		</div>
 
-		<div class="col-md-9 col-md-push-3 my-account">
+		<div id="invoices" class="col-md-9 col-md-push-3 my-account">
 			<section class="panel">
 				<header class="panel-heading">
 					<div class="panel-actions">
@@ -1278,7 +1284,7 @@
 							</tr>
 							<tr>
 								<td>Gecko</td>
-								<td>Mozilla 1.2</td>
+								<td>Mozilla 1.</td>
 								<td>Win 95+ / OSX.1+</td>
 								<td class="center hidden-xs">1.2</td>
 								<td class="center hidden-xs">A</td>
