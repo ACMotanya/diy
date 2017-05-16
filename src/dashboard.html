@@ -3,6 +3,12 @@ layout: default
 permalink: /dashboard/
 ---
 
+<style>
+      #invoices, #profile, #orders {
+        display: none;
+      }
+</style>
+
 <section class="page-header">
 	<div class="container">
 		<ul class="breadcrumb">
@@ -520,7 +526,7 @@ permalink: /dashboard/
 			</section>
 		</div>
 
-		<div class="col-md-9 col-md-push-3 my-account">
+		<div id="invoices" class="col-md-9 col-md-push-3 my-account">
 			<section class="panel">
 				<header class="panel-heading">
 					<div class="panel-actions">
