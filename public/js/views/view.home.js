@@ -1,9 +1,3 @@
-/*
-Name: 			View - Home
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	5.3.0
-*/
-
 (function($) {
 
 	'use strict';

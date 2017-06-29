@@ -1,3 +1,66 @@
+////////////////////////////////////////
+/// LOGIN INTO THE STORE AND VERIFY  ///
+////////////////////////////////////////
+function login()
+{
+  var password;
+
+  if ( localStorage.getItem('session_no') && typeof(localStorage.getItem('session_no')) === "string" && localStorage.getItem('session_no').length === 25 ) {   
+    windowHash("shop");
+    redirect("store");
+  }
+
+  var $loading = $('#loadingDiv').hide();
+
+  $(document).ajaxStart(function () {
+    $loading.show();
+  }).ajaxStop(function () {
+    $loading.hide();
+  });
+
+  $("#content").hide();
+  $("#login-form").on("submit", function(e) {
+     var goHead;
+     e.preventDefault();
+     username = $('#login-form-username').val();
+     password = $('#login-form-password').val();
+     var openOrderLines;
+     var invoiceLines;
+
+     $.ajax({
+      type: "GET",
+      url: "https://netlink.laurajanelle.com:444/nlhtml/custom/netlink.php?",
+      data: {request_id: "APICLOGIN",
+             username: username,
+             password: password,
+             loc_no: 800},
+      async: false,
+      success: function(response) {
+        if (response.replace(/\s+/g,'').length === 25) {
+          goHead = "go";
+          $.get("https://www.laurajanelle.com/phphelper/savecart/session.php?customer=" + username.toLowerCase() + "", function(answer){
+            if (answer === "0") {
+              $.get("https://www.laurajanelle.com/phphelper/savecart/session.php?customer=" + username.toLowerCase() + "&sessid=" + response + "");
+              session_no = response.replace(/\s+/g,'');
+              localStorage.setItem('session_no', session_no);
+            } else if (answer.length === 25 ) {
+              localStorage.setItem('session_no', answer);
+            }
+            localStorage.setItem('username', username);
+          }).done(function() {
+            windowHash("shop");
+            redirect("store");
+          });
+        } else {
+          alert("Login credentials are incorrect, try again.");
+          goHead = "stop";
+        }
+      }
+    });
+  });
+}
+
+
 
 //////////////////////////
 // Filter Function      //
@@ -78,9 +141,9 @@ function detailView()
     color = hash[2];
     type  = hash[3];
     metal = hash[4];
-    sessionStorage.setItem(stock_no, detailString);
-  } else if ( sessionStorage.getItem(stock_no) !== null  && sessionStorage.getItem(stock_no) != "undefined" && sessionStorage.getItem(stock_no).length >= 15 ) {      //  add back if undefined ever comes up again
-    dets = sessionStorage.getItem(stock_no).split("+");
+    localStorage.setItem(stock_no, detailString);
+  } else if ( localStorage.getItem(stock_no) !== null  && localStorage.getItem(stock_no) != "undefined" && localStorage.getItem(stock_no).length >= 15 ) {      //  add back if undefined ever comes up again
+    dets = localStorage.getItem(stock_no).split("+");
     color = dets[2];
     type  = dets[3];
     metal = dets[4];
@@ -108,22 +171,14 @@ function detailView()
       });
       
 
-      secondColumn  = '<h1 class="product-name">'+ fields[1] +'</h1><div class="product-short-desc"><p>	' + fields[8] + '</p></div><div class="product-detail-info"><div class="product-price-box"><span class="product-price">$' + fields[4] + '</span></div></div>';
+      secondColumn = '<h1 class="product-name">'+ fields[1] +'</h1><div class="product-short-desc"><p>	' + fields[8] + '</p></div><div class="product-detail-info"><div class="product-price-box"><span class="product-price">$' + fields[4] + '</span></div></div>';
       info =  '<tr><td>Description</td><td>' + fields[1] + '</td></tr>';
       info += '<tr><td>Dimensions</td><td>' + fields[6] + '</td></tr>';
       info += '<tr><td>Color</td><td>' + color +'</td></tr>';
       info += '<tr><td>Type</td><td>' + type + '</td></tr>';
       info += '<tr><td>Look</td><td>' + fields[2] + '</td></tr>';
       info += '<tr><td>Metal Color</td><td>' + metal + '</td></tr>';
-
-					
-
-					
-
-        
-       
       
-
        /* Fill in the pictures for the product 
 
        var pics =  '<div class="fslider" data-pagi="false" data-arrows="false" data-thumbs="true"><div class="flexslider"><div class="slider-wrap" data-lightbox="gallery">';
